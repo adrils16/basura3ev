@@ -76,6 +76,7 @@ public class Main {
 
     }
 
+    //No funciona
     public static void ejecutarJava() {
         ejecutarComando("cd ..");
         ejecutarComando("cd holamundo/src/main/java/com/example");
