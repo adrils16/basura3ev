@@ -11,10 +11,8 @@ public class Main5 {
         final String RUTA_PI = "pi.txt";
 
         File fichero = new File(RUTA_PI);
-        String pi = leerFichero(fichero);
-        String valor = leer(MSG_INTRO);
 
-        System.out.println(comprobarPi(pi, valor));
+        System.out.println(comprobarPi(leerFichero(fichero), leer(MSG_INTRO)));
     }
 
     /**
@@ -50,6 +48,14 @@ public class Main5 {
         return cadena;
     }
 
+    /**
+     * Comprueba si un valor se encuentra entre los decimales del numero pi, para ello separa los decimales
+     * en bloques segun el tamaño del valor introducido y termina la ejecución si encuentra el valor
+     * antes de leer todos los decimales
+     * @param pi el número pi leido desde un fichero
+     * @param valor valor introducido por el usuario
+     * @return Devuelve un mensaje diferente en función de si el valor ha sido, o no, encontrado
+     */
     public static String comprobarPi(String pi, String valor) {
 
         final String ENCONTRADO = "\n\u001B[32mEl valor %s está entre los decimales del número pi\u001B[0m\n";
